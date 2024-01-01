@@ -44,19 +44,18 @@ npm i @tanstack/react-query @tanstack/react-query-devtools
 
 ## Challenges
 
-### 1. Fetching a list of Pokémon from the API
+### 1. Fetched a list of Pokémon from the API
 
 - [ ] As a user, I want to see a list of the first generation of Pokémon so that I can see what Pokémon there are
 
-  - In `<PokemonList>` use `useQuery` and `fetchPokemonGeneration` to render a list of Pokémon (just the names)
+  - In `<PokemonList>`, used `useQuery` and `fetchPokemonGenerationApi` to render a list of Pokémon.
     <details style="padding-left: 2em">
       <summary>More about fetching Pokémon</summary>
       
-      - `fetchPokemonGeneration` takes a `generation` parameter, which is a number between 1 and 9, in this case, we want to fetch the first generation of Pokémon, so we can pass `1`
-      - Check the type in `models/pokemon.ts` a generation is an object with three properties: `{ region: string, name: string, pokemon: PartialPokemon[] }`
-      - `useQuery` takes a key (a string) and a function that returns a promise (`fetchPokemonGeneration`, in this case) and returns an object with a `data` property, which will eventually contain data returned by the promise
+      - `fetchPokemonGenerationApi` takes a `generation` parameter, which is a number between 1 and 9.
+      - As per `models/pokemon.ts`, a generation is an object with three properties: `{ region: string, name: string, pokemon: PartialPokemon[] }`
+      - `useQuery` takes a key (a string) and a function that returns a promise (`fetchPokemonGenerationApi`, in this case) and returns an object with a `data` property, which contains data returned by the promise.
 
-    Read more about [keys](https://tanstack.com/query/latest/docs/react/guides/query-keys) and [queries](https://tanstack.com/query/latest/docs/react/guides/queries) in the [React Query docs](https://tanstack.com/query/latest/docs/react).
     </details>
 
 ### 2. Adding a loading state

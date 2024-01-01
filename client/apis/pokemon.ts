@@ -1,7 +1,7 @@
 import request from 'superagent'
 import type { Pokemon, PokemonGeneration } from '../../models/pokemon.ts'
 
-export async function fetchPokemonGeneration(
+export async function fetchPokemonGenerationApi(
   generation: number
 ): Promise<PokemonGeneration> {
   return request

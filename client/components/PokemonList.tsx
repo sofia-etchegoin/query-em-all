@@ -1,8 +1,25 @@
+import { useQuery } from '@tanstack/react-query'
+import { fetchPokemonGenerationApi } from '../apis/pokemon'
+import LoadingSpinner from './LoadingSpinner'
+
 export default function PokemonList() {
-  const generation = {
-    name: 'generation-i',
-    region: 'Kanto',
-    pokemon: [{ id: 1, name: 'Bulbasaur' }],
+  const {
+    data: generation,
+    isError,
+    isLoading,
+  } = useQuery({
+    queryKey: ['generation'],
+
+    //fetchPokemonGenerationApi accepts a generation parament, which is a number between 1-9
+    queryFn: () => fetchPokemonGenerationApi(9),
+  })
+
+  if (isError) {
+    return <p>Whoops! Error fetching generation data.</p>
+  }
+
+  if (!generation || isLoading) {
+    return <LoadingSpinner />
   }
 
   return (
