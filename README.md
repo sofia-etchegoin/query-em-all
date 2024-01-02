@@ -58,21 +58,13 @@ npm i @tanstack/react-query @tanstack/react-query-devtools
 
     </details>
 
-### 2. Adding a loading state
+### 2. Added a loading state
 
-- [ ] As a user, I want to see a loading state while the list of Pokémon is being fetched so that I know something is happening
-<details style="padding-left: 2em">
-  <summary>More about loading states</summary>
-  
-  - `useQuery` returns an `isLoading` property that you can use to determine when to render a loading state
-  - You can use the `<LoadingSpinner>` component to render a special pokéball loading spinner
-</details>
+- Used the `<LoadingSpinner>` component to render a pokéball loading spinner.
 
-### 3. Adding an error state
+### 3. Added an error state
 
-- [ ] As a user, if something goes wrong while fetching the list of Pokémon, I want to see an error state so that I know something went wrong
-  <details style="padding-left: 2em">
-    <summary>More about error states</summary>
+- Input error state message
 
   - `useQuery` returns an `isError` (true or false), and `error` properties that you can use to render an error state
 
