@@ -73,14 +73,8 @@ npm i @tanstack/react-query @tanstack/react-query-devtools
 ### 4. Fetched a single Pokémon
 
 - In `<PokemonList>`, added a `<Link>` to each Pokémon that links to `/pokemon/:name`, where `:name` is the name of the Pokémon.
-- In `<PokemonDetail>`, use `useQuery` and `fetchPokemon` to render the Pokémon's name, image, and types
-<details style="padding-left: 2em">
-  <summary>More about Pokémon details</summary>
-  
-  Have a look in `models/pokemon.ts` at the `Pokemon` type to see what properties are available to you.
-</details>
-
-- In `<PokemonDetail>`, add loading and error states
+- In `<PokemonDetail>`, useed `useQuery` and `fetchPokemonApi` to render the Pokémon's name, image, and types.
+- In `<PokemonDetail>`, added loading and error states.
 
 ### 5. Adding more data to `<PokemonDetail>`
 

@@ -9,6 +9,6 @@ export async function fetchPokemonGenerationApi(
     .then((res) => res.body.generation)
 }
 
-export async function fetchPokemonByName(name: string): Promise<Pokemon> {
+export async function fetchPokemonByNameApi(name: string): Promise<Pokemon> {
   return request.get(`/api/v1/pokemon/${name}`).then((res) => res.body.pokemon)
 }
